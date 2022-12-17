@@ -1,0 +1,1 @@
+HTML significa Hypertext Markup Language, ou seja é uma linguagem de marcação de texto. Possui semântica, linguagem, sintaxe e etc. Através dele, conseguimos fazer hipertextos (inserir links de vídeos ou outros textos).
