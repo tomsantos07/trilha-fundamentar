@@ -6,24 +6,30 @@
  <table>
   <caption>Produzidos x Vendidos por Loja</caption>
 
+  <colgroup>
+    <col>
+    <col span="2" style="background-color: red;">
+    <col span="2" style="background-color: blue;">
+  </colgroup>
+
   <thead>
     <tr>
       <th rowspan="2"></th>
-      <th colspan="2">Afonso Peña</th>
-      <th colspan="2">Antonia Pereira</th>
+      <th colspan="2" scope="colgroup">Afonso Peña</th>
+      <th colspan="2" scope="colgroup">Antonia Pereira</th>
     </tr>
 
     <tr>
-      <th>Produzidos</th>
-      <th>Vendidos</th>
-      <th>Produzidos</th>
-      <th>Vendidos</th>
+      <th scope="col" >Produzidos</th>
+      <th scope="col" >Vendidos</th>
+      <th scope="col" >Produzidos</th>
+      <th scope="col" >Vendidos</th>
     </tr>
   </thead>
 
   <tbody>
     <tr>
-      <th>Vassouras</th>
+      <th scope="row">Vassouras</th>
       <td>50</td>
       <td>30</td>
       <td>20</td>
@@ -31,7 +37,7 @@
     </tr>
 
     <tr>
-      <th>Baldes</th>
+      <th scope="row">Baldes</th>
       <td>10</td>
       <td>10</td>
       <td>30</td>
@@ -39,3 +45,10 @@
     </tr>
   </tbody>
  </table>
+
+ <!--
+  colgroup é uma tag utilizada para agrupar as colunas
+
+  Acessibilidade => o atributo scope colgroup ajuda os leitores de tela, avisando sobre agrupamento de colunas.
+   o scope do th é col (agrupamento de linhas)
+-->
