@@ -9,3 +9,4 @@ p {
 	-moz-background-clip: text; /* Mozilla (Firefox) */
 	-ms-background-clip: text; /* Internet Explorer ou Edge*/
 	-o-background-clip: text; /* Opera */
+  }
