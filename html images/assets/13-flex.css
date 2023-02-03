@@ -1,0 +1,30 @@
+// Para fazer que toda a caixa fique alinhada ao meio da jane, precisa mexer no body
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
