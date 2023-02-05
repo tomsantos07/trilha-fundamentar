@@ -1,0 +1,46 @@
+<!-- 
+  <button>
+
+  - Representa um botão
+  - Usado para enviar formulários
+  - Por padrão, é estilizado pelo user agent (user agent === browser)
+
+  Atributos comuns
+  - type
+    - submit
+    - reset
+    - button
+  - autofocus
+  - disabled
+  - name
+  - value
+  - form
+-->
+
+<!-- Escreva algo dentro do campo e teste o button Limpar -->
+<form action="">
+  <input type="text" value="">
+  <button type="reset">Limpar</button>
+</form>
+
+<!-- Autofocus => quando entra na página, procura o primeiro autofocus e o seleciona automaticamente, podendo já preencher e apertar o enter, se for o caso -->
+<button autofocus>Enviar</button>
+<br> <br>
+
+<!-- Disabled => geralmente usado com regras Javascript. Ex: enquanto o user preenche o formulário e não desejado que se clique no botão antes de terminar, habilitando este botão somente no momento em que tudo estiver preenchido corretamente. -->
+<button disabled>Enviar</button>
+<br> <br>
+
+<!-- Name => quando usar o button, vc pode usar o value para que quando o formulário for enviado ele seja recebido em alguma relação do button. Mais para frente, veremos como se recebe valores de formulários. -->
+<button 
+type="submit" 
+name="button" 
+value="Valor qualquer"
+>
+Enviar
+</button>
+<br> <br>
+
+<!-- O form vai linkar a um formulário qualquer. Ex: form e button estão linkados pelo "meu-form"-->
+<form action="" id="meu-form"></form>
+<button type="submit" form="meu-form">Enviar</button>
