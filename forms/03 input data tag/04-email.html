@@ -1,0 +1,41 @@
+<!--
+  <input type="email"/>
+
+  - Espera que o usuário digite um email
+  - Irá validar se o valor digitado é um email
+
+  # Atributos
+
+  - placeholder
+  - readonly - disabled
+  - value
+
+  - required
+
+  - multiple
+    * o campo irá receber 1 ou mais emails, separados por vírgulas
+
+  - minlength / maslength
+    * O mínimo e / ou máximo valor que o campo irá conter
+
+  - size
+    * o valor numérico indicando quantos caracteres esse campo deveria conter, modificando o tamanho do campo para o usuário
+  
+  - pattern
+    * Uso de expressão regular para validar o campo
+      Ex: o usuário só poderá colocar o email do domínio @exemplo.com.br
+      * pattern=".+@exemplo\.com\.br"
+  
+  - list
+    * o id de uma tag <datakust> que está no mesmo documento <datalista> irá conter uma lista de valores pré definidos
+-->
+
+<!-- Exemplo de pattern -->
+<form action="">
+  <input 
+  type="email" 
+  pattern=".+@exemplo\.com\.br"
+  title="Somente emails exemplo.com.br serão aceitos"
+  >
+  <button type="submit">Enviar</button>
+</form>
