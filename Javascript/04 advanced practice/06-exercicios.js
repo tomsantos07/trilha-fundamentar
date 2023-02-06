@@ -58,7 +58,7 @@ let newStudent = {
 }
 
 // fonte: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
-let addStudent = students.unshift(newStudent)
+let addStudent = students.splice(1, 0, newStudent)
 
 console.log(students);
 
