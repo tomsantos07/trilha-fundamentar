@@ -57,7 +57,9 @@ let newStudent = {
   isSubscribed: true
 }
 
-// fonte: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+// fontes: 
+// https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array
+// https://www.freecodecamp.org/portuguese/news/como-inserir-um-elemento-em-um-array-em-js/#:~:text=Se%20voc%C3%AA%20deseja%20adicionar%20um,usar%20o%20m%C3%A9todo%20concat()%20.
 let addStudent = students.splice(1, 0, newStudent)
 
 console.log(students);
