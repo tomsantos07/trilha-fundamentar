@@ -42,11 +42,12 @@ function familyBalance() {
   
   if(result < 0) {
     console.log(`O saldo negativo é de R$${result}`);
-  } else if(result === 0) {
+  } if(result === 0) {
     console.log(`Os gastos igualam as despesas. R$${result}`);
-  } else {
+  } {
     console.log(`O saldo positivo é de R$${result}`);
   }
-}
 
-console.log(familyBalance(incomeSum, expenseSum));
+  return result;
+}
+familyBalance(incomeSum, expenseSum)
