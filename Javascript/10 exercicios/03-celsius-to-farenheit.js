@@ -1,50 +1,66 @@
 /*
-Fluxo de caixa familiar
+Celsius to Fahrenheit
 Descrição
-Esse desafio envolve a criação de dois arrays e um função que calculará o resultado desses valores, dizendo se é positivo ou negativo, e após isso, o valor do saldo.
+Nesse desafio faremos uma função que vai receber uma string em Celsius ou Fahrenheit, e fazer a transformação de uma unidade para a outra.
+
 Desafio:
-Crie um objeto que possuirá 2 propriedades, ambas do tipo array:
-    * receitas: [] 
-    * despesas: []
-Agora, crie uma função que irá calcular o total de receitas e 
-despesas e irá mostrar uma mensagem se a família está com 
-saldo positivo ou negativo, seguido do valor do saldo.
+
+Crie uma função que receba uma string em celsius ou fahrenheit
+e faça a transformação de uma unidade para outra 
+    C = (F - 32) * 5/9 
+    F = C * 9/5 + 32
 */
 
-let familySpent = {
-  incomes: [1200, 1000, 650, 500, 350, 400],
-  expenses: [900, 61, 450, 120, 60, 457, 300]
-}
+// let celsius = '26';
+// let fahrenheit = '180';
+/*
+function convertTemp(celsius, farenheit) {
+  Number(celsius, fahrenheit)
 
-// soma as receitas
-let getAllIncomes = familySpent.incomes;
-let incomeSum = 0;
-
-for(let i = 0; i < getAllIncomes.length; i++) {
-  incomeSum += getAllIncomes[i]
-}
-console.log(incomeSum);
-
-//soma as despesas
-let getAllExpenses = familySpent.expenses;
-let expenseSum = 0;
-
-for(let i = 0; i < getAllExpenses.length; i++) {
-  expenseSum += getAllExpenses[i]
-}
-console.log(expenseSum);
-
-// verifica se o saldo familiar é positivo ou negativo
-function familyBalance() {
-  let result = incomeSum - expenseSum
-
-  if(result < 0) {
-    console.log(`O saldo negativo é de R$${result}`);
-  } if(result === 0) {
-    console.log(`Os gastos igualam as despesas. R$${result}`);
-  } {
-    console.log(`O saldo positivo é de R$${result}`);
+  if(celsius) {
+    let F = celsius * 9/5 + 32;
+    console.log(`A temperatura é ${F} Fahrenheit`);
+  } else {
+    let C = (fahrenheit - 32) * 5/9;
+    console.log(`A temperatura é ${C.toFixed(1)} graus Celsius`);
   }
+
+}
+
+console.log(convertTemp(false, '180'));
+console.log(convertTemp('26', false));
+*/
+
+// construir uma função que faça a conversão de temperatura 
+function convertDegrees(degree) {
+  const celsiusExists = degree.toUpperCase().includes('C')
+  const fahrenheitExists = degree.toUpperCase().includes('F')
+
+  // fluxo de erro
+  if (!celsiusExists && !fahrenheitExists) {
+    throw new Error('Grau não identificado')
+  }
+
+  // fluxo ideal: fahrenheit to celsius
+  let updatedDegree = Number(degree.toUpperCase().replace("F", ""));
+  let formula = fahrenheit => (fahrenheit - 32) * 5 / 9
+  let degreeSign = 'C'
+
+  // fluxo alternativo: Celsius to Fahrenheit
+  if (celsiusExists) {
+    updatedDegree = Number(degree.toUpperCase().replace("C", ""));
+    formula = celsius => celsius * 9/5 + 32
+    degreeSign = 'F'
+  }
+
+  return formula(updatedDegree) + degreeSign
+}
+try {
+  console.log(convertDegrees('10C'))
+  console.log(convertDegrees('50F'))
+} catch (error) {
+  console.log(error.message);
+}
 
   return result;
 }
