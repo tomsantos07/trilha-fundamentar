@@ -41,12 +41,16 @@ function familyBalance() {
   let result = incomeSum - expenseSum
   
   if(result < 0) {
-    console.log(`O saldo negativo é de R$${result}`);
-  } else if(result === 0) {
-    console.log(`Os gastos igualam as despesas. R$${result}`);
-  } else {
-    console.log(`O saldo positivo é de R$${result}`);
+    return(`O saldo negativo é de R$${result}`);
   }
-}
+   
+  if(result === 0) {
+    return(`Os gastos igualam as despesas. R$${result}`);
+  }
 
-console.log(familyBalance(incomeSum, expenseSum));
+  return(`O saldo positivo é de R$${result}`);
+  
+}
+console.log(familyBalance(incomeSum, expenseSum))
+
+// fiz a inserção do console.log na linha 54 para a exibição no terminal. Aguardo instruções.
