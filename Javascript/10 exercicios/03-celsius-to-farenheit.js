@@ -61,7 +61,3 @@ try {
 } catch (error) {
   console.log(error.message);
 }
-
-  return result;
-}
-familyBalance(incomeSum, expenseSum)
